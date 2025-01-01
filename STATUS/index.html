@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャラクターステータスウィンドウ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../rare/shia2.png" alt="キャラクター画像" class="character-image">
+        <!-- ../rare/shia2.png -->
+        <div class="status-window">
+            <div class="character-info">
+                <span class="name">放浪武士　シア</span>
+                <!-- 放浪武士　シア -->
+                <span class="rarity">★★★★★</span>
+            </div>
+            <div class="level-info">
+                <span class="level" data-level="100" data-max-level="100"></span>
+                <span class="affinity" data-affinity="100" data-max-affinity="100"></span>
+            </div>
+            <div class="bars-container">
+                <div class="exp-bar-container">
+                    <div class="exp-bar" data-current-exp="1020" data-max-exp="2000" style="width: 40%;"></div>
+                </div>
+                <div class="affinity-bar-container">
+                    <div class="affinity-bar" data-current-affinity="15000" data-max-affinity="20000" style="width: 75%;"></div>
+                </div>
+            </div>
+
+            <div class="stat" data-stat="vitality" data-value="" data-color="" data-hp="30000">
+                <span class="stat-name">生命力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">HP：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="mentalstrength" data-value="100" data-color="#54000D" data-mp="18800">
+                <span class="stat-name">精神力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">MP：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="strength" data-value="100" data-color="#54000D" data-atk="18200">
+                <span class="stat-name">　筋力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">ATK：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="dexterity" data-value="100" data-color="#54000D" data-dex="19900">
+                <span class="stat-name">　技量</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">DEX：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="endurance" data-value="100" data-color="#54000D" data-def="21800">
+                <span class="stat-name">耐久力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">DEF：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="magic" data-value="100" data-color="#54000D" data-matk="22900">
+                <span class="stat-name">　魔力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">MATK：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="magicdefense" data-value="100" data-color="#54000D" data-mdef="23000">
+                <span class="stat-name">魔防力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">MDEF：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="agility" data-value="100" data-color="#54000D" data-agi="19900">
+                <span class="stat-name">　速力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">AGI：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="intelligence" data-value="100" data-color="#54000D" data-int="18500">
+                <span class="stat-name">　知力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">INT：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="evasion" data-value="100" data-color="#54000D" data-eva="17400">
+                <span class="stat-name">回避力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">EVA：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="faith" data-value="100" data-color="#54000D" data-faith="19700">
+                <span class="stat-name">　信仰</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">FAITH：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="mysticism" data-value="100" data-color="#54000D" data-mys="19900">
+                <span class="stat-name">　神秘</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">MYS：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="charm" data-value="100" data-color="#54000D" data-charm="48000">
+                <span class="stat-name">　魅力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">CHARM：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="luck" data-value="100" data-color="#54000D" data-luk="99999">
+                <span class="stat-name">　　運</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">LUK：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="potential" data-value="100" data-color="#54000D" data-pot="49000">
+                <span class="stat-name">潜在力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">POT：</span> <span class="stat-number"></span></span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
