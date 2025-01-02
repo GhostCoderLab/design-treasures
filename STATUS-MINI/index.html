@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャラクターステータスウィンドウ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../rare/shia2.png" alt="キャラクター画像" class="character-image">
+        <div class="status-window">
+            <div class="character-info">
+                <span class="name">放浪武士　シア</span>
+                <span class="rarity">★★★★★</span>
+            </div>
+            <div class="level-info">
+                <span class="level" data-level="1" data-max-level="100"></span>
+                <span class="affinity" data-affinity="1" data-max-affinity="100"></span>
+            </div>
+            <div class="bars-container">
+                <div class="exp-bar-container">
+                    <div class="exp-bar" data-current-exp="0" data-max-exp="100" style="width: 40%;">
+                        <span class="exp-text"></span>
+                    </div>
+                </div>
+                <div class="affinity-bar-container">
+                    <div class="affinity-bar" data-current-affinity="0" data-max-affinity="100" style="width: 75%;">
+                        <span class="affinity-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat" data-stat="vitality" data-value="" data-color="" data-hp="500">
+                <span class="stat-name">　体力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">HP：</span> <span class="stat-number"></span></span>
+            </div>
+            <div class="stat" data-stat="mentalstrength" data-value="100" data-color="#54000D" data-atk="500">
+                <span class="stat-name">攻撃力</span>
+                <img src="../rare/X.jpg" class="rarity-image" alt="レアリティ">
+                <div class="stat-bar"></div>
+                <span class="stat-value"><span class="stat-label">ATK：</span> <span class="stat-number"></span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
