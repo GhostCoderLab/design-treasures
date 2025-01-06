@@ -2,8 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const tabs = document.querySelectorAll(".tab");
     const codeBlocks = document.querySelectorAll(".code");
     const buttons = document.querySelectorAll(".design-grid button");
-    const codeContentHTML = document.getElementById("html");
-    const codeContentCSS = document.getElementById("css");
+
+    const codeContentMapping = {
+        set1: { html: document.getElementById("html1"), css: document.getElementById("css1") },
+        set2: { html: document.getElementById("html2"), css: document.getElementById("css2") }
+    };
 
     const buttonData = {
         btn1: {
@@ -72,26 +75,54 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    // タブ切り替え機能
-    tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            tabs.forEach(tab => tab.classList.remove("active"));
-            codeBlocks.forEach(code => code.classList.remove("active"));
 
-            tab.classList.add("active");
-            const targetCode = document.getElementById(tab.dataset.target);
-            targetCode.classList.add("active");
+    // Event Listener for Tabs
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function() {
+            const target = this.dataset.target;
+            const parentViewer = this.closest(".code-viewer");
+            const codeElements = parentViewer.querySelectorAll(".code");
+            const activeTab = parentViewer.querySelector(".tab.active");
+
+            if (activeTab) activeTab.classList.remove("active");
+            this.classList.add("active");
+
+            codeElements.forEach(code => {
+                if (code.id === target) {
+                    code.classList.add("active");
+                } else {
+                    code.classList.remove("active");
+                }
+            });
         });
     });
 
-    // ボタンクリックでコードを更新
+    // Event Listener for Buttons
     buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const buttonClass = button.classList[0];
-            if (buttonData[buttonClass]) {
-                codeContentHTML.innerHTML = buttonData[buttonClass].html;
-                codeContentCSS.innerText = buttonData[buttonClass].css;
-            }
+        button.addEventListener("click", function() {
+            const btnClass = this.classList[0];
+            const section = this.closest(".section").querySelector(".code-viewer");
+            const setKey = section.querySelector(".copy-btn").dataset.target;
+
+            const htmlContent = buttonData[btnClass]?.html || "Not Available";
+            const cssContent = buttonData[btnClass]?.css || "Not Available";
+
+            codeContentMapping[setKey].html.innerHTML = htmlContent;
+            codeContentMapping[setKey].css.innerHTML = cssContent;
+        });
+    });
+
+    // Event Listener for Copy Button
+    const copyButtons = document.querySelectorAll(".copy-btn");
+    copyButtons.forEach(copyBtn => {
+        copyBtn.addEventListener("click", function() {
+            const target = this.dataset.target;
+            const htmlContent = codeContentMapping[target].html.textContent;
+            const cssContent = codeContentMapping[target].css.textContent;
+            const contentToCopy = `HTML:\n${htmlContent}\n\nCSS:\n${cssContent}`;
+            navigator.clipboard.writeText(contentToCopy).then(() => {
+                alert("Code copied to clipboard!");
+            });
         });
     });
 });
