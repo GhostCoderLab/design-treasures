@@ -76,52 +76,52 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
 
-    // Event Listener for Tabs
     tabs.forEach(tab => {
         tab.addEventListener("click", function() {
-            const target = this.dataset.target;
-            const parentViewer = this.closest(".code-viewer");
-            const codeElements = parentViewer.querySelectorAll(".code");
-            const activeTab = parentViewer.querySelector(".tab.active");
+            const target = tab.dataset.target;
+            const parent = tab.closest(".code-viewer");
+            const allTabs = parent.querySelectorAll(".tab");
+            const allCodeBlocks = parent.querySelectorAll(".code");
 
-            if (activeTab) activeTab.classList.remove("active");
-            this.classList.add("active");
+            allTabs.forEach(t => t.classList.remove("active"));
+            allCodeBlocks.forEach(c => c.classList.remove("active"));
 
-            codeElements.forEach(code => {
-                if (code.id === target) {
-                    code.classList.add("active");
-                } else {
-                    code.classList.remove("active");
-                }
-            });
+            tab.classList.add("active");
+            parent.querySelector(`#${target}`).classList.add("active");
         });
     });
 
-    // Event Listener for Buttons
     buttons.forEach(button => {
         button.addEventListener("click", function() {
-            const btnClass = this.classList[0];
-            const section = this.closest(".section").querySelector(".code-viewer");
-            const setKey = section.querySelector(".copy-btn").dataset.target;
+            const className = button.classList[0];
+            const section = button.closest(".section");
+            const setName = section.querySelector(".copy-btn").dataset.target;
+            const codeViewer = codeContentMapping[setName];
 
-            const htmlContent = buttonData[btnClass]?.html || "Not Available";
-            const cssContent = buttonData[btnClass]?.css || "Not Available";
-
-            codeContentMapping[setKey].html.innerHTML = htmlContent;
-            codeContentMapping[setKey].css.innerHTML = cssContent;
+            if (buttonData[className]) {
+                codeViewer.html.textContent = buttonData[className].html;
+                codeViewer.css.textContent = buttonData[className].css;
+            }
         });
     });
 
-    // Event Listener for Copy Button
-    const copyButtons = document.querySelectorAll(".copy-btn");
-    copyButtons.forEach(copyBtn => {
+    document.querySelectorAll(".copy-btn").forEach(copyBtn => {
         copyBtn.addEventListener("click", function() {
-            const target = this.dataset.target;
-            const htmlContent = codeContentMapping[target].html.textContent;
-            const cssContent = codeContentMapping[target].css.textContent;
-            const contentToCopy = `HTML:\n${htmlContent}\n\nCSS:\n${cssContent}`;
+            const setName = copyBtn.dataset.target;
+            const codeViewer = codeContentMapping[setName];
+            const activeTab = copyBtn.closest(".code-viewer").querySelector(".tab.active").dataset.target;
+
+            let contentToCopy = "";
+            if (activeTab.includes("html")) {
+                contentToCopy = codeViewer.html.textContent.replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+            } else if (activeTab.includes("css")) {
+                contentToCopy = codeViewer.css.textContent;
+            }
+
             navigator.clipboard.writeText(contentToCopy).then(() => {
                 alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
             });
         });
     });
