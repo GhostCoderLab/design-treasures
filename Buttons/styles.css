@@ -40,97 +40,100 @@ h1 {
 }
 
 button {
-    padding: 10px;
+    padding: 12px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
+/* Button Hover Effect */
 button:hover {
-    background-color: #0056b3;
-    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Button styles */
+/* Individual Button Styles */
 .btn1 {
-    background-color: #FF5733;
+    background: linear-gradient(45deg, #FF5733, #FFC300);
     color: white;
 }
 
 .btn2 {
-    background-color: #33FF57;
+    background: linear-gradient(45deg, #33FF57, #57FFA5);
     color: white;
 }
 
 .btn3 {
-    background-color: #3357FF;
+    background: linear-gradient(45deg, #3357FF, #57A5FF);
     color: white;
 }
 
 .btn4 {
-    background-color: #FF33A1;
+    background: linear-gradient(45deg, #FF33A1, #FF85D1);
     color: white;
 }
 
 .btn5 {
-    background-color: #FF8C33;
+    background: linear-gradient(45deg, #FF8C33, #FFD933);
     color: white;
 }
 
 .btn6 {
-    background-color: #33FFD1;
+    background: linear-gradient(45deg, #33FFD1, #33FF85);
     color: white;
 }
 
 .btn7 {
-    background-color: #8C33FF;
+    background: linear-gradient(45deg, #8C33FF, #D633FF);
     color: white;
 }
 
 .btn8 {
-    background-color: #FF33C7;
+    background: linear-gradient(45deg, #FF33C7, #FF33FF);
     color: white;
 }
 
 .btn9 {
-    background-color: #FFBD33;
+    background: linear-gradient(45deg, #FFBD33, #FFD933);
     color: white;
 }
 
 .btn10 {
-    background-color: #33FF85;
+    background: linear-gradient(45deg, #33FF85, #33FFD1);
     color: white;
 }
 
 .btn11 {
-    background-color: #337BFF;
+    background: linear-gradient(45deg, #337BFF, #33C7FF);
     color: white;
 }
 
 .btn12 {
-    background-color: #A833FF;
+    background: linear-gradient(45deg, #A833FF, #D633FF);
     color: white;
 }
 
 .btn13 {
-    background-color: #FF3385;
+    background: linear-gradient(45deg, #FF3385, #FF85A1);
     color: white;
 }
 
 .btn14 {
-    background-color: #FF6633;
+    background: linear-gradient(45deg, #FF6633, #FF8C33);
     color: white;
 }
 
 .btn15 {
-    background-color: #33FFC4;
+    background: linear-gradient(45deg, #33FFC4, #33FFA5);
     color: white;
 }
 
 .btn16 {
-    background-color: #3333FF;
+    background: linear-gradient(45deg, #3333FF, #3357FF);
     color: white;
 }
 
