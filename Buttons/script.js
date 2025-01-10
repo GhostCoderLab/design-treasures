@@ -72,6 +72,71 @@ document.addEventListener("DOMContentLoaded", function() {
         btn16: {
             html: '&lt;button class="btn16"&gt;Button 16&lt;/button&gt;',
             css: `.btn16 {\n    background: linear-gradient(45deg, #3333FF, #3357FF);\n    color: white;\n}`
+        },
+
+        btn17: {
+            html: '&lt;button class="btn17"&gt;Button 17&lt;/button&gt;',
+            css: `.btn17 {\n    background: linear-gradient(45deg, #F39C12, #F1C40F);\n    color: white;\n}`
+        },
+        btn18: {
+            html: '&lt;button class="btn18"&gt;Button 18&lt;/button&gt;',
+            css: `.btn18 {\n    background: linear-gradient(45deg, #1ABC9C, #16A085);\n    color: white;\n}`
+        },
+        btn19: {
+            html: '&lt;button class="btn19"&gt;Button 19&lt;/button&gt;',
+            css: `.btn19 {\n    background: linear-gradient(45deg, #9B59B6, #8E44AD);\n    color: white;\n}`
+        },
+        btn20: {
+            html: '&lt;button class="btn20"&gt;Button 20&lt;/button&gt;',
+            css: `.btn20 {\n    background: linear-gradient(45deg, #E74C3C, #C0392B);\n    color: white;\n}`
+        },
+        btn21: {
+            html: '&lt;button class="btn21"&gt;Button 21&lt;/button&gt;',
+            css: `.btn21 {\n    background: linear-gradient(45deg, #2980B9, #3498DB);\n    color: white;\n}`
+        },
+        btn22: {
+            html: '&lt;button class="btn22"&gt;Button 22&lt;/button&gt;',
+            css: `.btn22 {\n    background: linear-gradient(45deg, #27AE60, #2ECC71);\n    color: white;\n}`
+        },
+        btn23: {
+            html: '&lt;button class="btn23"&gt;Button 23&lt;/button&gt;',
+            css: `.btn23 {\n    background: linear-gradient(45deg, #E67E22, #D35400);\n    color: white;\n}`
+        },
+        btn24: {
+            html: '&lt;button class="btn24"&gt;Button 24&lt;/button&gt;',
+            css: `.btn24 {\n    background: linear-gradient(45deg, #ECF0F1, #BDC3C7);\n    color: black;\n}`
+        },
+        btn25: {
+            html: '&lt;button class="btn25"&gt;Button 25&lt;/button&gt;',
+            css: `.btn25 {\n    background: linear-gradient(45deg, #2C3E50, #34495E);\n    color: white;\n}`
+        },
+        btn26: {
+            html: '&lt;button class="btn26"&gt;Button 26&lt;/button&gt;',
+            css: `.btn26 {\n    background: linear-gradient(45deg, #D5DBDB, #85929E);\n    color: black;\n}`
+        },
+        btn27: {
+            html: '&lt;button class="btn27"&gt;Button 27&lt;/button&gt;',
+            css: `.btn27 {\n    background: linear-gradient(45deg, #F4D03F, #F5B041);\n    color: black;\n}`
+        },
+        btn28: {
+            html: '&lt;button class="btn28"&gt;Button 28&lt;/button&gt;',
+            css: `.btn28 {\n    background: linear-gradient(45deg, #82E0AA, #58D68D);\n    color: white;\n}`
+        },
+        btn29: {
+            html: '&lt;button class="btn29"&gt;Button 29&lt;/button&gt;',
+            css: `.btn29 {\n    background: linear-gradient(45deg, #85C1E9, #5DADE2);\n    color: white;\n}`
+        },
+        btn30: {
+            html: '&lt;button class="btn30"&gt;Button 30&lt;/button&gt;',
+            css: `.btn30 {\n    background: linear-gradient(45deg, #BB8FCE, #A569BD);\n    color: white;\n}`
+        },
+        btn31: {
+            html: '&lt;button class="btn31"&gt;Button 31&lt;/button&gt;',
+            css: `.btn31 {\n    background: linear-gradient(45deg, #E59866, #D98880);\n    color: white;\n}`
+        },
+        btn32: {
+            html: '&lt;button class="btn32"&gt;Button 32&lt;/button&gt;',
+            css: `.btn32 {\n    background: linear-gradient(45deg, #AF7AC5, #9B59B6);\n    color: white;\n}`
         }
     };
 
